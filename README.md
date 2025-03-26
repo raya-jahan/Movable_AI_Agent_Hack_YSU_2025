@@ -1,2 +1,34 @@
-# Movable_Agent_Hack_YSU_2025
-Built an AI agent using Gemini API, Playwright, and ElevenLabs to automate tasks like sending emails, adding Amazon products, and performing web searches through prompts. And engineered a full-stack web solution with Next.js, Node.js, Tailwind CSS, and REST APIs, integrating real-time browser automation and voice transcription from speech-to-text.
+AI Agent Project
+This project is an advanced AI Agent that integrates Google’s Gemini API with a modern full-stack application. The backend is built using Node.js, Express, and TypeScript, providing a robust and scalable API that leverages Gemini’s generative capabilities to process and generate content based on user inputs. The integration is designed to support multiple tools such as web search, text summarization, real-time data information, adding Amazon products, and email composition, making it versatile for various automation tasks.
+
+On the frontend, the application is developed with Next.js and React, styled with TailwindCSS to deliver a responsive and visually appealing user interface. Users can interact with the agent by entering text prompts or using voice commands, which are captured and converted to text via the Web Speech API. This seamless integration of speech-to-text functionality allows for an intuitive, hands-free experience, enhancing both accessibility and usability.
+
+The architecture of this project is modular, enabling easy expansion and customization. This modularity not only facilitates rapid development in automation but also lays the groundwork for incorporating additional features like conversation memory, advanced chat interfaces, and more sophisticated AI-driven tools in the future.
+
+Overall, this AI Agent project exemplifies a sophisticated approach to combining cutting-edge AI technologies with modern web development practices, which serves as an ideal foundation for hackathons and production-level applications, showcasing how integrated AI solutions can streamline and enhance user interactions across various domains.
+
+Features:
+
+AI-Driven Content Generation: Leverages Google’s Gemini API to generate and process content based on user inputs.
+Multi-Tool Integration: Supports tools like web search, text summarization, real-time data retrieval, Amazon product integration, and email composition.
+Voice-Enabled Interaction: Incorporates the Web Speech API for capturing and converting speech to text for a hands-free experience.
+Modern Frontend Stack: Developed with Next.js, React, and styled using TailwindCSS for a responsive and user-friendly interface.
+Modular Architecture: Designed for easy expansion and customization, paving the way for additional advanced features.
+
+Getting Started
+Backend Setup:
+
+Install dependencies with npm install in the backend directory.
+Create a .env file and set your API keys.
+Start the backend server with node index.js.
+
+Frontend Setup:
+
+Navigate to the frontend directory.
+Install dependencies with npm install.
+Start the development server with npm run dev.
+
+Usage:
+
+Open your browser and navigate to http://localhost:3000.
+Interact with the AI Agent via text or voice prompts.
