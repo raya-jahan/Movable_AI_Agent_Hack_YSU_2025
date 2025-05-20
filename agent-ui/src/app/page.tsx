@@ -3,6 +3,11 @@ import { useState, useRef } from "react";
 import Image from "next/image";
 import axios from "axios";
 
+
+
+const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5001";
+
+
 export default function Home() {
   const [prompt, setPrompt] = useState("");
   const [tool, setTool] = useState("gemini");
@@ -14,7 +19,9 @@ export default function Home() {
 
     
     // const res = await axios.post("http://localhost:5001/api", { prompt,tool });
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+    
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5001";
+
     const res = await axios.post(`${apiUrl}/api`, { prompt, tool });
 
     
