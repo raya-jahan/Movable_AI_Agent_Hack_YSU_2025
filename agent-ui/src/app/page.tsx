@@ -11,7 +11,15 @@ export default function Home() {
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
 
   const handleSubmit = async () => {
-    const res = await axios.post("http://localhost:5001/api", { prompt,tool });
+
+    
+    // const res = await axios.post("http://localhost:5001/api", { prompt,tool });
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+    const res = await axios.post(`${apiUrl}/api`, { prompt, tool });
+
+    
+
+
     console.log('this is my prompt and tool',{prompt, tool});;
     setResponse(res.data);
   };
@@ -45,11 +53,22 @@ export default function Home() {
 
           console.log('Audio blob size:', audioBlob.size);
           try {
-            const res = await axios.post("http://localhost:5001/api/upload", formData, {
-              headers: {
-                "Content-Type": "multipart/form-data",
-              },
-            });
+
+
+            const res = await axios.post(`${apiUrl}/api/upload`, formData, {
+  headers: {
+    "Content-Type": "multipart/form-data",
+  },
+});
+
+            
+            // const res = await axios.post("http://localhost:5001/api/upload", formData, {
+            //   headers: {
+            //     "Content-Type": "multipart/form-data",
+            //   },
+            // });
+
+            
             console.log((res.data));
             const { transcription } = res.data;
             console.log('Transcription received:', transcription);
